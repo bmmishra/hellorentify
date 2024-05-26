@@ -24,9 +24,9 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Static files middleware
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, './client/build')));
+const _dirname = path.dirname("")
+const buildpath = path.join(_dirname,"../client/build")
+app.use(express.static(buildpath));
 
 // Routes
 app.use("/api/v1/auth", authRoutes);
